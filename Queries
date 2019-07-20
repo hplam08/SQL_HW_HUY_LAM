@@ -1,3 +1,37 @@
+-- Create tables
+
+CREATE TABLE Department_Employee (
+    "emp_no" int NOT NULL Primary key,
+    "dept_no" varchar NOT NULL,
+    "from_date" varchar(255) NOT NULL,
+    "to_date" varchar(255) NOT NULL
+);
+
+CREATE TABLE Department (
+    "dept_no" varchar(255) NOT NULL Primary key,
+    "dept_name" varchar(255)   NOT NULL
+);
+
+CREATE TABLE Department_Manager (
+    "dept_no" varchar(255) NOT NULL,
+    "emp_no" int NOT NULL,
+    "from_date" varchar(255)   NOT NULL,
+    "to_date" varchar(255)   NOT NULL
+);
+
+CREATE TABLE Employees (
+    "emp_no" int   NOT NULL,
+    "birth_date" varchar(255)   NOT NULL,
+    "first_name" varchar(255)   NOT NULL,
+	"last_name" varchar(255)   NOT NULL,
+    "gender" varchar(255)   NOT NULL,
+    "hire_date" varchar(255)   NOT NULL
+);
+
+CREATE TABLE Salaries (
+    "emp_no" int   NOT NULL,
+
+
 --1. List the following details of each employee: employee number, last name, first name, gender, and salary.
 
 SELECT e.emp_no, e.last_name, e.first_name, e.gender, s.salary
